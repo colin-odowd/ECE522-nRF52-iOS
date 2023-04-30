@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z4o-8g-xJS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="supreme.ttf">
+            <string>FuturaBT-BoldItalic</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller Home-->
+        <scene sceneID="R7R-Du-hTL">
+            <objects>
+                <viewController id="z4o-8g-xJS" customClass="ViewControllerHome" customModule="iOS_BLE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UpY-y7-kxo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ssLogo" translatesAutoresizingMaskIntoConstraints="NO" id="fwa-uS-C1p">
+                                <rect key="frame" x="40" y="284" width="334" height="328"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ncN-IT-xi4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fwa-uS-C1p" firstAttribute="top" secondItem="ncN-IT-xi4" secondAttribute="top" constant="236" id="237-5G-Svp"/>
+                            <constraint firstItem="fwa-uS-C1p" firstAttribute="leading" secondItem="ncN-IT-xi4" secondAttribute="leading" constant="40" id="3AA-k8-5oN"/>
+                            <constraint firstItem="fwa-uS-C1p" firstAttribute="centerX" secondItem="UpY-y7-kxo" secondAttribute="centerX" id="c1z-2S-Z0n"/>
+                            <constraint firstItem="fwa-uS-C1p" firstAttribute="centerY" secondItem="UpY-y7-kxo" secondAttribute="centerY" id="tj4-ZQ-xnW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ssLogo" destination="fwa-uS-C1p" id="Yn8-9R-Zd5"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="homeToBLE" modalPresentationStyle="fullScreen" id="fGO-Gg-zol"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mgB-oa-1qD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2403" y="74"/>
+        </scene>
+        <!--View ControllerBLE-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewControllerBLE" customModule="iOS_BLE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ssLogo" translatesAutoresizingMaskIntoConstraints="NO" id="AHN-L9-MuV">
+                                <rect key="frame" x="20" y="48" width="83" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="0xI-nT-wTg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Smart Swaddle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u7k-oZ-PRA">
+                                <rect key="frame" x="134" y="62" width="235" height="51"/>
+                                <fontDescription key="fontDescription" name="FuturaBT-BoldItalic" family="Futura" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LzP-5c-gCW">
+                                <rect key="frame" x="20" y="207" width="224.5" height="408"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="LNB-sS-YeN">
+                                        <rect key="frame" x="0.0" y="0.0" width="186.5" height="408"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heart Rate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9z-L6-qLJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="186.5" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="FuturaBT-BoldItalic" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breathing Rate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNX-KX-7J0">
+                                                <rect key="frame" x="0.0" y="75.5" width="186.5" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="FuturaBT-BoldItalic" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oxygen Sat" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb9-DC-T7g">
+                                                <rect key="frame" x="0.0" y="151" width="186.5" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="FuturaBT-BoldItalic" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2N-yw-Se0">
+                                                <rect key="frame" x="0.0" y="226.5" width="186.5" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="FuturaBT-BoldItalic" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQG-hB-XEt">
+                                                <rect key="frame" x="0.0" y="302" width="186.5" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="FuturaBT-BoldItalic" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body Position" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gix-YS-3tW">
+                                                <rect key="frame" x="0.0" y="377.5" width="186.5" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="FuturaBT-BoldItalic" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="kzi-u4-Ml3">
+                                        <rect key="frame" x="216.5" y="0.0" width="8" height="408"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmb-MG-oxZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="8" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="FuturaBT-BoldItalic" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zXN-kS-Rv8">
+                                                <rect key="frame" x="0.0" y="75.5" width="8" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="FuturaBT-BoldItalic" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfM-iH-bAf">
+                                                <rect key="frame" x="0.0" y="151" width="8" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="FuturaBT-BoldItalic" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WE0-VY-k57">
+                                                <rect key="frame" x="0.0" y="226.5" width="8" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="FuturaBT-BoldItalic" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MJ-mk-Gw8">
+                                                <rect key="frame" x="0.0" y="302" width="8" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="FuturaBT-BoldItalic" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXU-lI-7no">
+                                                <rect key="frame" x="0.0" y="377.5" width="8" height="30.5"/>
+                                                <fontDescription key="fontDescription" name="FuturaBT-BoldItalic" family="Futura" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LzP-5c-gCW" firstAttribute="top" secondItem="AHN-L9-MuV" secondAttribute="bottom" constant="25" id="95U-Il-ycg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="LzP-5c-gCW" secondAttribute="bottom" constant="85" id="HHb-ph-1L2"/>
+                            <constraint firstItem="AHN-L9-MuV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ehJ-7b-Ers"/>
+                            <constraint firstItem="AHN-L9-MuV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-19" id="fXv-Bg-PcL"/>
+                            <constraint firstItem="u7k-oZ-PRA" firstAttribute="leading" secondItem="AHN-L9-MuV" secondAttribute="trailing" constant="23" id="iz8-RT-B27"/>
+                            <constraint firstItem="LzP-5c-gCW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="mZV-Ge-mgr"/>
+                            <constraint firstItem="AHN-L9-MuV" firstAttribute="centerY" secondItem="u7k-oZ-PRA" secondAttribute="centerY" id="yAJ-7I-6SV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Opn-9C-MP5"/>
+                    <connections>
+                        <outlet property="sensorAccelLabel" destination="Gix-YS-3tW" id="kAA-mn-MNl"/>
+                        <outlet property="sensorAccelValue" destination="QXU-lI-7no" id="3oQ-I4-h79"/>
+                        <outlet property="sensorBRLabel" destination="iNX-KX-7J0" id="MjK-yV-55n"/>
+                        <outlet property="sensorBRValue" destination="zXN-kS-Rv8" id="G95-Wj-FO6"/>
+                        <outlet property="sensorHRMLabel" destination="w9z-L6-qLJ" id="05I-bh-fZJ"/>
+                        <outlet property="sensorHRMValue" destination="Wmb-MG-oxZ" id="AGi-FU-rRU"/>
+                        <outlet property="sensorHumLabel" destination="CQG-hB-XEt" id="4Cy-b5-7Xw"/>
+                        <outlet property="sensorHumValue" destination="2MJ-mk-Gw8" id="CgB-Xs-l1f"/>
+                        <outlet property="sensorOxySatLabel" destination="bb9-DC-T7g" id="ntu-rG-q5V"/>
+                        <outlet property="sensorOxySatValue" destination="qfM-iH-bAf" id="P0d-Wj-oor"/>
+                        <outlet property="sensorTempLabel" destination="x2N-yw-Se0" id="0An-yy-FIe"/>
+                        <outlet property="sensorTempValue" destination="WE0-VY-k57" id="9g1-sP-ed6"/>
+                        <segue destination="LCz-pg-kCZ" kind="presentation" identifier="toChartView" id="WQi-3s-ulO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <barButtonItem image="arrow.clockwise" catalog="system" id="uly-jL-Sqx"/>
+            </objects>
+            <point key="canvasLocation" x="-1603" y="74"/>
+        </scene>
+        <!--View Controller Chart-->
+        <scene sceneID="Amj-eg-Rnh">
+            <objects>
+                <viewController id="LCz-pg-kCZ" customClass="ViewControllerChart" customModule="iOS_BLE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G7o-ec-Z83">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SQM-GA-6Wx" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="32" y="228" width="351" height="383"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="3Vw-57-4GT">
+                                <rect key="frame" x="100" y="78" width="214.5" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfX-Kx-Xb8">
+                                        <rect key="frame" x="0.0" y="0.0" width="134.5" height="50"/>
+                                        <fontDescription key="fontDescription" name="FuturaBT-BoldItalic" family="Futura" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKb-cC-mY7">
+                                        <rect key="frame" x="164.5" y="0.0" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" name="FuturaBT-BoldItalic" family="Futura" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iT1-QZ-45H"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SQM-GA-6Wx" firstAttribute="top" secondItem="3Vw-57-4GT" secondAttribute="bottom" constant="50" id="9AN-d1-g5l"/>
+                            <constraint firstItem="SQM-GA-6Wx" firstAttribute="leading" secondItem="iT1-QZ-45H" secondAttribute="leading" constant="32" id="B75-2S-9NZ"/>
+                            <constraint firstItem="SQM-GA-6Wx" firstAttribute="centerX" secondItem="3Vw-57-4GT" secondAttribute="centerX" id="GSI-i6-Uhn"/>
+                            <constraint firstItem="SQM-GA-6Wx" firstAttribute="centerY" secondItem="G7o-ec-Z83" secondAttribute="centerY" id="QU0-XT-CBt"/>
+                            <constraint firstItem="SQM-GA-6Wx" firstAttribute="centerX" secondItem="G7o-ec-Z83" secondAttribute="centerX" id="psY-vh-zjN"/>
+                            <constraint firstAttribute="bottom" secondItem="3Vw-57-4GT" secondAttribute="bottom" constant="675" id="yKl-VZ-UfQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelSensorName" destination="NfX-Kx-Xb8" id="IWg-DG-pd1"/>
+                        <outlet property="labelSensorValue" destination="ZKb-cC-mY7" id="Nfo-a2-uuq"/>
+                        <outlet property="lineChart" destination="SQM-GA-6Wx" id="B4l-gO-uZR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dqh-76-sXO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-830.43478260869574" y="73.660714285714278"/>
+        </scene>
+        <!--View Controller Alert-->
+        <scene sceneID="3Mk-lg-1fX">
+            <objects>
+                <viewController id="8rF-JV-jYG" customClass="ViewControllerAlert" customModule="iOS_BLE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dcv-pA-7x8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ssAlert" translatesAutoresizingMaskIntoConstraints="NO" id="jno-O7-rKQ">
+                                <rect key="frame" x="40" y="284" width="334" height="328"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fz3-Ez-cdw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tOA-K3-9V0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-67" y="74"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
+        <image name="ssAlert" width="300" height="255"/>
+        <image name="ssLogo" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
